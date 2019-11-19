@@ -6,7 +6,6 @@ public class HelloWorld {
         app.config.addStaticFiles("/static");
 
 
-        app.get("/", ctx -> ctx.render("login.html"))
-        ;
+        app.get("/", ctx -> ctx.render("login.html"));
     }
 }
