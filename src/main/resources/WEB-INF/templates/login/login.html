@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title>LoginScreen</title>
     <style>
         form {
@@ -75,14 +75,15 @@
         }
     </style>
 
-
-
 </head>
 <body>
+
 <form action="action_page.php" method="post">
 <div class="imgcontainer">
-    <img src="derp_face.png" alt="Avatar"
-         class="avatar">
+    <img alt="Avatar" title="Avatar"
+         class="avatar" th:src="@{derp_face.png}" th:alt-title="#{logo}">
+    <span th:utext="#{login.welcome}">Welcome to your open Trip Payments App!</span>
+    <p>Today is: <span th:text="#{login.today}">13 February 2011</span></p>
 </div>
 
 <div class="container">
