@@ -47,6 +47,12 @@
       <version>19.0</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.mindrot</groupId>
+      <artifactId>jbcrypt</artifactId>
+      <version>0.3m</version>
+    </dependency>
+
     <!--dependency>
       <groupId>org.apache.velocity</groupId>
       <artifactId>velocity-engine-core</artifactId>
@@ -55,34 +61,11 @@
 
 
     <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
-    <dependency>
-      <groupId>org.mongodb</groupId>
-      <artifactId>mongo-java-driver</artifactId>
-      <version>3.11.2</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.mongodb</groupId>
-      <artifactId>mongodb-driver-sync</artifactId>
-      <version>3.11.2</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.mongodb</groupId>
-      <artifactId>mongodb-driver-legacy</artifactId>
-      <version>3.11.2</version>
-    </dependency>
 
     <dependency>
       <groupId>org.mongodb</groupId>
       <artifactId>mongodb-driver</artifactId>
-      <version>3.11.2</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.mindrot</groupId>
-      <artifactId>jbcrypt</artifactId>
-      <version>0.3m</version>
+      <version>3.6.4</version>
     </dependency>
 
   </dependencies>
