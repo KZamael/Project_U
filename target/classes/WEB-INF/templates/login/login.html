@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Index</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title>LoginScreen</title>
     <style>
         form {
             border: 3px solid #f1f1f1;
@@ -74,22 +74,36 @@
             }
         }
     </style>
+
 </head>
 <body>
+
+<form action="action_page.php" method="post">
 <div class="imgcontainer">
-    <span th:utext="#{home.welcome}">Welcome to our grocery store!</span>
+    <img alt="Avatar" title="Avatar"
+         class="avatar" th:src="@{derp_face.png}" th:alt-title="#{logo}">
+    <span th:utext="#{login.welcome}">Welcome to your open Trip Payments App!</span>
+    <p>Today is: <span th:text="#{login.today}">13 February 2011</span></p>
 </div>
 
-<p>Today is: <span th:text="#{home.today}">13 february 2011</span></p>
-<h1 th:utext="#{home.index_heading}">Login</h1>
+<div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Penis gnihihihi"
+           name="uname" required
+           id="uname">
 
-
-
-<!--h2>$msg.get("INDEX_REGISTERED_USERS", $users.size())</--h2>
-<ul>
-    #foreach($user in $users)
-    <li>$user</li>
-    #end
-</ul-->
+    <button type="sumit">Login</button>
+    <label>
+        <input type="checkbox" checked="checked"
+               name="remember"> Remember me
+    </label>
+</div>
+<div class="container" style="background-color:#f1f1f1">
+    <button type="button"
+            class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?
+    </a></span>
+</div>
+</form>
 </body>
 </html>

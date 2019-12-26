@@ -15,11 +15,13 @@ import org.thymeleaf.context.WebContext;
 
 import static app.MainApplication.*;
 
-public class HomeController {
+// U need this for Thymeleaf
+
+public class IndexController {
     public static Handler serveIndexPage = ctx -> {
         Map<String, Object> model = ViewUtil.baseModel(ctx);
         model.put("users", userDao.getAllUserNames());
         model.put("payments", paymentDao.getAllPayments());
-        ctx.render(Path.Template.LOGIN, model);
+        ctx.render(Path.Template.INDEX, model);
     };
 }
