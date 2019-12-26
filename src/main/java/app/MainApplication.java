@@ -25,6 +25,25 @@ import static io.javalin.apibuilder.ApiBuilder.before;
 import static io.javalin.apibuilder.ApiBuilder.get;
 import static io.javalin.apibuilder.ApiBuilder.post;
 
+
+
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientOptions;
+import com.mongodb.MongoCredential;
+import com.mongodb.ServerAddress;
+import com.mongodb.client.MongoDatabase;
+import org.bson.codecs.configuration.CodecRegistries;
+import org.bson.codecs.configuration.CodecRegistry;
+import org.bson.codecs.pojo.PojoCodecProvider;
+
+
+import javax.xml.crypto.Data;
+import java.util.List;
+
+import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
+import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
+
+
 public class MainApplication {
 
     private TemplateEngine templateEngine;
@@ -32,6 +51,7 @@ public class MainApplication {
 
     public static UserDao userDao;
     public static PaymentDao paymentDao;
+    //Data Sources window
 
     public MainApplication(final ServletContext servletContext)
     {
@@ -50,6 +70,23 @@ public class MainApplication {
         userDao = new UserDao();
         paymentDao = new PaymentDao();
 
+
+        MongoDatabase db;
+
+
+        //           MongoCredential cred = MongoCredential.createCredential(username,database,password.toCharArray());
+        CodecRegistry pRegistry = fromRegistries(
+                MongoClient.getDefaultCodecRegistry(),
+                fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+        MongoClient client = new MongoClient(
+            List.of(new ServerAddress("localhost")),
+            //               cred,
+            MongoClientOptions.builder().codecRegistry(pRegistry).build()
+        );
+
+        db = client.getDatabase("quitt");
+
+        System.out.println(db.getName());
 
         Javalin app = Javalin.create(config -> {
             config.addStaticFiles("/static/images");
