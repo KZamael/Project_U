@@ -1,0 +1,103 @@
+{
+  "_id": {
+    "$oid": "5dbe1ab3b27d8f7e7e247340"
+  },
+  "title": "Raidgruppe",
+  "transactions": [
+    {
+      "amount": {
+        "$numberDecimal": "15.35"
+      },
+      "date": {
+        "$date": "2019-10-03T21:02:00Z"
+      },
+      "user": "Ash"
+    },
+    {
+      "amount": {
+        "$numberDecimal": "5.2"
+      },
+      "date": {
+        "$date": "2019-10-03T21:02:00Z"
+      },
+      "user": "Misty"
+    },
+    {
+      "amount": {
+        "$numberDecimal": "10"
+      },
+      "date": {
+        "$date": "2019-12-15T20:18:47.544Z"
+      },
+      "user": "Rocko"
+    },
+    {
+      "amount": {
+        "$numberDecimal": "25"
+      },
+      "date": {
+        "$date": "2019-12-15T20:23:10.447Z"
+      },
+      "user": "Rocko"
+    },
+    {
+      "amount": {
+        "$numberDecimal": "5"
+      },
+      "date": {
+        "$date": "2019-12-17T12:47:10.848Z"
+      },
+      "user": "Rocko"
+    }
+  ],
+  "users": [
+    "Rocko",
+    "Ash",
+    "Erika",
+    "Pyro",
+    "Misty"
+  ]
+}
+{
+  "_id": {
+    "$oid": "5dbe1b70d7480aa333b3c1f5"
+  },
+  "title": "Lerngruppe",
+  "users": [
+    "Daniel",
+    "Hannah",
+    "Chriss"
+  ],
+  "transactions": [
+    {
+      "user": "Daniel",
+      "amount": {
+        "$numberDecimal": "6.66"
+      },
+      "date": {
+        "$date": "2019-10-02T21:02:00Z"
+      }
+    }
+  ]
+}
+{
+  "_id": {
+    "$oid": "5df6a0b4c2566deff11d46cb"
+  },
+  "title": "Weitere_Spieler",
+  "transactions": [
+    {
+      "amount": {
+        "$numberDecimal": "30"
+      },
+      "date": {
+        "$date": "2019-12-15T21:12:18.001Z"
+      },
+      "user": "Rocko"
+    }
+  ],
+  "users": [
+    "Daniel",
+    "Rocko"
+  ]
+}

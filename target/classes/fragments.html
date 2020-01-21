@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<div th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <title th:text="${title}">Project U - My Balance</title>
+    <link rel="stylesheet" href="styles.css" th:href="@{/css/styles.css}" />
+</div>
+
+<header th:fragment="header">
+    <h1>Project U</h1>
+    <nav>
+        <a href="#" th:text="${session.currentuser}" th:href="@{/logout}"><span>Abmelden</span>Abmelden</a>
+    </nav>
+</header>
+
+<footer th:fragment="footer">
+    <nav>
+        <ul>
+            <li><a class="link-home" href="groups.html" th:href="@{/}">Balance</a></li>
+            <li><a class="link-add-group" href="groups.html" th:href="@{/add_group}">Add Group</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>

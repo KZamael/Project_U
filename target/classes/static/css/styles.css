@@ -1,0 +1,201 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color:#EEEEEE;
+    font-family: Helevetica, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #0000AA;color: #0000AA;
+}
+
+a:visited {
+   color: inherit;
+}
+
+fieldset {
+    border: none;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    border: 3px solid #f1f1f1;
+}
+
+label {
+    display: inline-block;
+    width: 33%;
+}
+
+input[type=text], input[type=password] {
+    width: 64%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Hover for Mouse */
+button:hover {
+    opacity: 0.8;
+}
+
+header {
+    box-sizing: border-box;
+    display: flex;
+    margin:0;
+    background: #75ABDC;
+    color: #FFFFFF;
+}
+
+header h1 {
+    flex: 3;
+    margin: 0;
+    padding: 10px 30px;
+}
+header nav {
+    flex: 1;
+    text-align:right;
+    padding: 20px;
+}
+header nav a {
+    color:#FFFFFF;
+}
+
+section#body {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+footer nav ul li {
+    list-style-type: none;
+}
+
+footer {
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-top: #000030 1px solid;
+    padding: 20px;
+}
+footer nav ul {
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+footer nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+footer nav ul li a {
+    display:block;
+    background: center top no-repeat;
+    background-size: 20px;
+    padding: 25px 3px 3px 3px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.payroll,
+.myactions {
+    background-color:#FFFFFF;
+    margin: 0px 20px;
+    padding:5px 0px;
+}
+.payroll li,
+.myactions li,
+.paygroups li,
+
+footer nav ul li {
+    list-style-type: none;
+}
+
+ul.payroll {
+    border-left: #AAAAAA 2px dashed;
+}
+ul.payroll li {
+    padding:10px 30px;
+    margin-bottom: 5px;
+    background: #DDDDDD;
+    border-bottom: #AAAAAA 2px dashed;
+}
+ul.payroll li .paid {
+    float: right;
+    color: #00AA00;
+}
+.mybalance,
+.paygroups li {
+    padding: 15px 30px;
+    background-color:#FFFFFF;
+    border: #9090AA 2px solid;
+    border-radius: 20px;
+}
+.mybalance .saldo,
+.paygroups .saldo {
+    float: right;
+}
+.myactions ul,
+.paygroups {
+    padding:0;
+}
+.paygroups li {
+    margin-bottom: 20px;
+}
+.myactions ul li {
+    padding: 0px 20px;
+}
+.myactions a {
+    border: #DDDDDD 2px solid;
+    padding: 10px 15px;
+    color: #000000;
+}
+
+.loginform {
+    padding: 10px;
+    border: #000030 1px solid;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+a.link-home {
+    background-image: url("../images/hamburger-solid.svg")
+}
+a.link-add-group {
+    background-image: url("../images/user-plus-solid.svg")
+}
+
+/*Cancel button */
+/*.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}*/
+
+/*center the avatar container*/
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/*avatar img*/
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+

@@ -1,0 +1,31 @@
+{
+  "_id": {
+    "$oid": "5dbe1ca6d7480aa333b3c22a"
+  },
+  "username": "Homer",
+  "password": "HomerJ"
+}
+{
+  "_id": {
+    "$oid": "5dd3054f9852c1c72ecb94ad"
+  },
+  "username": "Ned",
+  "password": "Flanders"
+}
+{
+  "_id": {
+    "$oid": "5dd3cc4c83ceac71c89ba38a"
+  },
+  "username": "Lisa",
+  "password": "Saxophone"
+}
+{
+  "_id": {
+    "$oid": "5ddae426717cc6c7b9935a17"
+  },
+  "username": "Wiggum",
+  "password": "Chief",
+  "_etag": {
+    "$oid": "5ddae4266daa9d6a5bdbc8dc"
+  }
+}

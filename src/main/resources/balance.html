@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments.html :: head(title='Project U - My Balance')">
+</head>
+<body>
+<div th:replace="fragments.html :: header"></div>
+<section id="body">
+    <ul class="payroll">
+        <li th:each="p : ${payments}"><span class="user" th:text="${p.user}">Dummy</span><span class="paid" th:text="${p.amount}">2,30€</span></li>
+    </ul>
+    <div class="mybalance">
+        <p>Dein aktuelles Saldo:<span class="saldo" th:text="${balance}">5,30€</span></p>
+    </div>
+    <div class="myactions">
+        <ul>
+            <li>
+                <a href="#" th:href="@{/balance/{id}/trx(id=${groupName})}">Geld einzahlen</a>
+                <a href="#">Gruppe verlassen</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<div th:replace="fragments.html :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments.html :: head(title='quitt - Index')">
+    <meta charset="UTF-8">
+    <title>quitt - Index</title>
+</head>
+<body>
+<div th:replace="fragments.html :: header"></div>
+<section id="body">
+    <form class="loginform" action="#" th:action="@{/balance/{id}/trx(id=${groupname})}" method="post">
+        <fieldset>
+            <label for="amount">Betrag: </label>
+            <input type="number" name="amount" id="amount" />
+        </fieldset>
+        <input type="submit" />
+    </form>
+</section>
+<div th:replace="fragments.html :: footer"></div>
+</body>
+</html>

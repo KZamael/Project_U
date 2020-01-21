@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments.html :: head(title='Project U - Index')">
+    <meta charset="UTF-8" />
+    <title>Project U - Index</title>
+</head>
+<body>
+<div th:replace="fragments.html :: header"></div>
+<section id="body">
+    <div class="imgcontainer">
+        <img alt="Avatar" title="Avatar"
+             class="avatar" th:src="@{derp_face.png}" th:alt-title="#{logo}">
+    </div>
+    <form class="loginform" action="#" th:action="@{/login}" method="post">
+        <fieldset>
+            <label for="username">Username</label>
+            <input type="text"  name="username" id="username" maxlength="25" required>
+            <label>
+                <input type="checkbox" checked="checked"
+                       name="remember"> Remember me
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="password">Passwort</label>
+            <input type="password" name="password" id="password" maxlength="25">
+        </fieldset>
+        <input type="submit" value="Login" /></form>
+    </form>
+</section>
+<div th:replace="fragments.html :: footer"></div>
+</body>
+</html>

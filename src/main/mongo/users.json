@@ -1,0 +1,31 @@
+{
+  "_id": {
+    "$oid": "5dbe1ca6d7480aa333b3c22a"
+  },
+  "username": "Ash",
+  "password": "ff7733e7bada0d75c4f1cea58179b36092fb557930f0c5cdbf2989096aad7666"
+}
+{
+  "_id": {
+    "$oid": "5dd3054f9852c1c72ecb94ad"
+  },
+  "username": "Daniel",
+  "password": "73ef670199956edb8504a103f691d1525643b652dddf01eee12fee560bd15dd3"
+}
+{
+  "_id": {
+    "$oid": "5dd3cc4c83ceac71c89ba38a"
+  },
+  "username": "Misty",
+  "password": "543f74d68f6e1d6264375b0556b0595138d21a27c35690ae452522c24aa0e605"
+}
+{
+  "_id": {
+    "$oid": "5ddae426717cc6c7b9935a17"
+  },
+  "username": "James",
+  "password": "d40a5aca994e2515589d71a99faba3f6bafaa9ef19fc72228d87b341e0614472",
+  "_etag": {
+    "$oid": "5ddae4266daa9d6a5bdbc8dc"
+  }
+}

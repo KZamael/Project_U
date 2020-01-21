@@ -1,19 +1,10 @@
 package app;
 
-import java.util.HashMap;
 import java.util.Map;
 
-import app.business.util.HerokuUtil;
-import app.business.util.Path;
-import app.business.util.ViewUtil;
-import app.business.util.Filters;
+import app.business.util.AppBuilder;
+import app.business.util.AppFactory;
 
-import app.web.application.PaymentDao;
-import app.web.controller.IndexController;
-import app.web.controller.LoginController;
-import app.web.application.UserDao;
-
-import app.web.controller.PaymentController;
 import io.javalin.Javalin;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.templatemode.TemplateMode;
@@ -26,31 +17,32 @@ import static io.javalin.apibuilder.ApiBuilder.get;
 import static io.javalin.apibuilder.ApiBuilder.post;
 
 
-
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientOptions;
-import com.mongodb.MongoCredential;
-import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoDatabase;
-import org.bson.codecs.configuration.CodecRegistries;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
 
 
-import javax.xml.crypto.Data;
-import java.util.List;
-
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
-
+/**
+ * Main Class des Project_U.
+ */
 public class MainApplication {
 
-    private TemplateEngine templateEngine;
+    /**
+     * Main Methode, die als Einstiegspunkt dient.
+     * @param args Arguments, die vom
+     */
+    public static void main(String[] args) {
+        AppBuilder.create().withFactory(AppFactory.getInstance()).build();
+    }
+
+    /*private TemplateEngine templateEngine;
     private Map<String, IndexController> controllersByURL;
 
-    public static UserDao userDao;
-    public static PaymentDao paymentDao;
+    public static UserRepository userDao;
+    public static PaymentgroupRepository paymentDao;
     //Data Sources window
 
     public MainApplication(final ServletContext servletContext)
@@ -67,8 +59,8 @@ public class MainApplication {
     public static void main(String[] args) {
 
         // Initialize the context
-        userDao = new UserDao();
-        paymentDao = new PaymentDao();
+        userDao = new UserRepository();
+        paymentDao = new PaymentgroupRepository();
 
 
         MongoDatabase db;
@@ -78,17 +70,17 @@ public class MainApplication {
         CodecRegistry pRegistry = fromRegistries(
                 MongoClient.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
-        MongoClient client = new MongoClient(
+        /*MongoClient client = new MongoClient(
             List.of(new ServerAddress("localhost")),
-            //               cred,
+                           cred,
             MongoClientOptions.builder().codecRegistry(pRegistry).build()
         );
 
         db = client.getDatabase("quitt");
 
-        System.out.println(db.getName());
+        System.out.println(db.getName());*/
 
-        Javalin app = Javalin.create(config -> {
+        /*Javalin app = Javalin.create(config -> {
             config.addStaticFiles("/static/images");
             config.addStaticFiles("/static/css");
         }).start(HerokuUtil.getAssignedPort());
@@ -98,8 +90,8 @@ public class MainApplication {
             before(Filters.handleLocaleChange);
             before(LoginController.ensureLoginBeforeViewingPayments);
             get(Path.Web.INDEX, IndexController.serveIndexPage);
-            get(Path.Web.PAYMENTS, PaymentController.fetchAllPayments);
-            get(Path.Web.ONE_PAYMENT, PaymentController.fetchOnePayment);
+            get(Path.Web.PAYMENTS, PaymentgroupController.fetchAllPayments);
+            get(Path.Web.ONE_PAYMENT, PaymentgroupController.fetchOnePayment);
             post(Path.Web.LOGIN, LoginController.handleLoginPost);
             post(Path.Web.LOGOUT, LoginController.handleLogoutPost);
         });
@@ -107,5 +99,5 @@ public class MainApplication {
         //app.get("/", ctx -> ctx.render("WEB-INF/templates/login/login.html"));
 
         app.error(404, ViewUtil.notFound);
-    }
+    }*/
 }

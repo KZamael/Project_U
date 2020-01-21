@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments.html :: head(title='Project U - Index')">
+    <meta charset="UTF-8">
+    <title>Project U - Index</title>
+</head>
+<body>
+<div th:replace="fragments.html :: header"></div>
+<section id="body">
+    <ul class="paygroups">
+        <li th:each="grp : ${payGroups}"><span class="groupname"><a href="balance.html" th:href="@{/balance/{id}(id=${grp.title})}" th:text="${grp.title}"> Raidgruppe</a></span><span class="saldo" th:text="${grp.title}">tbi</span></li>
+    </ul>
+</section>
+<div th:replace="fragments.html :: footer"></div>
+</body>
+</html>
